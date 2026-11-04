@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Twitterviewer redirect for Firefox — automatically opens X/Twitter posts, profiles, and hashtags in TwitterViewer.net.">
+  <meta property="og:title" content="Twitterviewer redirect for Firefox">
+  <meta property="og:description" content="Automatically opens X/Twitter posts, profiles, and hashtags in TwitterViewer.net.">
+  <meta property="og:type" content="website">
+  <title>Twitterviewer redirect for Firefox</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/home.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="./">
+        <img src="assets/logo.svg" alt="" width="36" height="36">
+        <span>Twitterviewer redirect</span>
+      </a>
+      <nav class="topnav" aria-label="Site">
+        <a href="help/">Help &amp; Support</a>
+        <a class="topnav-cta" href="https://addons.mozilla.org/twitterviewer-redirect">Firefox Add-ons</a>
+      </nav>
+    </header>
+
+    <header class="hero">
+      <img class="logo" alt="TwitterViewer bird logo" src="assets/logo.svg" width="96" height="96">
+      <h1>Twitterviewer redirect</h1>
+      <p class="lead">A Firefox extension that automatically opens X/Twitter posts, profiles, and hashtags in TwitterViewer.net &mdash; no pasting links, no login walls.</p>
+      <p class="cta"><a class="btn" href="https://addons.mozilla.org/twitterviewer-redirect">Download the extension</a></p>
+      <p class="note">Available on Mozilla Add-ons. Firefox 140+ required. Version 1.0.1. Free, open source, no data collected.</p>
+    </header>
+
+    <nav class="toc" aria-label="Page contents">
+      <a href="#what">What it does</a>
+      <a href="#examples">Examples</a>
+      <a href="#install">Install</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="help/">Help &amp; Support</a>
+    </nav>
+
+    <section id="what">
+      <h2>What it does</h2>
+      <p>When you visit X or Twitter in Firefox, Twitterviewer redirect sends supported pages straight to <a href="https://twitterviewer.net/">TwitterViewer.net</a> so you can read them without an account. It covers:</p>
+      <ul>
+        <li><strong>Posts:</strong> <code>x.com/&lt;handle&gt;/status/&lt;id&gt;</code>, including photo/video suffixes and <code>/i/status/</code> links.</li>
+        <li><strong>Profiles:</strong> <code>x.com/&lt;handle&gt;</code>.</li>
+        <li><strong>Hashtags:</strong> <code>x.com/hashtag/&lt;tag&gt;</code>.</li>
+      </ul>
+      <p>It works on <code>x.com</code> and <code>twitter.com</code>, including <code>www.</code> and <code>mobile.</code> subdomains, and preserves your original URL, query string, and hash so the right post is opened. Navigation pages such as Home, Explore, Search, and sign-in are left alone.</p>
+    </section>
+
+    <section id="examples">
+      <h2>Redirect examples</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr><th>You open</th><th>Extension opens</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="mono">https://x.com/SpaceX/status/1925045393307627815</td><td class="mono">https://twitterviewer.net/i/share?entry=extension&amp;url=...</td></tr>
+            <tr><td class="mono">https://twitter.com/NASA</td><td class="mono">https://twitterviewer.net/NASA</td></tr>
+            <tr><td class="mono">https://x.com/hashtag/Formula1</td><td class="mono">https://twitterviewer.net/i/share?entry=extension&amp;url=...</td></tr>
+            <tr><td class="mono">https://x.com/home</td><td>Stays on X (feed page, not redirected)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2>Install</h2>
+      <div class="card">
+        <h3>Get it from Mozilla Add-ons</h3>
+        <p>Install <strong>Twitterviewer redirect</strong> directly from the official Mozilla Add-ons listing. Firefox keeps it updated automatically.</p>
+        <p><a class="btn" href="https://addons.mozilla.org/twitterviewer-redirect">Download the extension</a></p>
+        <p class="note">Requires Firefox 140 or newer (Firefox for Android 142 or newer). After installing, open any supported post, profile, or hashtag to start using it.</p>
+      </div>
+      <p>Need help with installation or troubleshooting? Visit the <a href="help/">Help &amp; Support page</a>.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy</h2>
+      <p>This extension collects no personal data and declares no data-collection permissions (<code>"data_collection_permissions": { "required": ["none"] }</code>). It runs entirely in your browser and only rewrites navigation URLs matching x.com and twitter.com &mdash; it never sees or stores the page contents.</p>
+      <p>Only top-level page navigations are redirected (<code>types: ["main_frame"]</code>); images, scripts, and API calls are untouched. TwitterViewer.net itself is never redirected, so there is no redirect loop.</p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <h3>What is this extension?</h3>
+      <p>Twitterviewer redirect is a small Firefox extension that sends X/Twitter posts, profiles, and hashtags to TwitterViewer.net automatically, so you can view public content without signing in to X.</p>
+      <h3>Which Firefox version do I need?</h3>
+      <p>Firefox 140 or newer (Firefox for Android 142 or newer).</p>
+      <h3>Why is Home or Explore not redirected?</h3>
+      <p>Those pages are app navigation, not viewable content. The extension only redirects posts, profiles, and hashtags &mdash; the same set supported by TwitterViewer.net.</p>
+      <h3>Does it work on twitter.com too?</h3>
+      <p>Yes. <code>x.com</code> and <code>twitter.com</code> (including <code>www.</code> and <code>mobile.</code>) are both covered.</p>
+      <h3>Where can I get help?</h3>
+      <p>See the <a href="help/">Help &amp; Support page</a> for troubleshooting and contact details.</p>
+      <h3>Is it free?</h3>
+      <p>Yes, free and open source.</p>
+    </section>
+
+    <footer>
+      <p>Twitterviewer redirect &middot; v1.0.1 &middot; Built for Firefox</p>
+      <p><a href="help/">Help &amp; Support</a> &middot; <a href="https://addons.mozilla.org/twitterviewer-redirect">Mozilla Add-ons</a></p>
+      <p>Not affiliated with X Corp or TwitterViewer.net.</p>
+    </footer>
+  </div>
+</body>
+</html>

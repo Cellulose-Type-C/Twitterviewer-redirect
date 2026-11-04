@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help and support for the Twitterviewer redirect Firefox extension: installation, troubleshooting, privacy, and contact.">
+  <title>Help &amp; Support — Twitterviewer redirect</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../">
+        <img src="../assets/logo.svg" alt="" width="40" height="40">
+        <span>Twitterviewer redirect <span class="brand-sub">Help</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Help sections">
+        <a href="../">Home</a>
+        <a href="#install">Install</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="help-title">
+        <h1 id="help-title">Help &amp; Support</h1>
+        <p>Answers for installing, using, and troubleshooting the Twitterviewer redirect extension for Firefox.</p>
+        <div class="search">
+          <label for="help-search">Search help topics</label>
+          <input id="help-search" type="search" placeholder="e.g. not redirecting, private windows, Firefox version" autocomplete="off">
+          <p class="search-hint">Type to filter the questions below. Search works offline.</p>
+        </div>
+        <div class="quick-grid">
+          <a class="quick-card" href="#install">
+            <strong>Install</strong>
+            <span>Requirements and setup</span>
+          </a>
+          <a class="quick-card" href="#troubleshooting">
+            <strong>Troubleshooting</strong>
+            <span>Fix common redirect problems</span>
+          </a>
+          <a class="quick-card" href="#privacy">
+            <strong>Privacy</strong>
+            <span>What the extension can and cannot see</span>
+          </a>
+          <a class="quick-card" href="#contact">
+            <strong>Contact</strong>
+            <span>Send a message by form or email</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="install" aria-labelledby="install-title">
+        <h2 id="install-title">Installation</h2>
+        <p>Twitterviewer redirect is a Firefox extension. It requires <strong>Firefox 140 or newer</strong> (Firefox for Android 142 or newer).</p>
+        <div class="card">
+          <h3 class="flush-top">Install from Mozilla Add-ons</h3>
+          <ol>
+            <li>Open the <a href="https://addons.mozilla.org/twitterviewer-redirect">Mozilla Add-ons listing</a>.</li>
+            <li>Click <strong>Add to Firefox</strong> and confirm the install.</li>
+            <li>Open any supported X/Twitter post, profile, or hashtag. It should open on TwitterViewer.net.</li>
+          </ol>
+          <p><a class="btn" href="https://addons.mozilla.org/twitterviewer-redirect">Download the extension</a></p>
+          <p class="note">Firefox keeps the extension updated automatically. You can manage or remove it at any time in <code>about:addons</code>.</p>
+        </div>
+        <h3>Supported pages</h3>
+        <div class="table">
+          <table>
+            <thead>
+              <tr><th>Page type</th><th>Example</th><th>Redirected</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Post</td><td class="mono">x.com/SpaceX/status/1925045393307627815</td><td>Yes</td></tr>
+              <tr><td>Post with media</td><td class="mono">x.com/SpaceX/status/1925045393307627815/photo/1</td><td>Yes</td></tr>
+              <tr><td>Short post link</td><td class="mono">x.com/i/status/1925045393307627815</td><td>Yes</td></tr>
+              <tr><td>Profile</td><td class="mono">x.com/NASA</td><td>Yes</td></tr>
+              <tr><td>Hashtag</td><td class="mono">x.com/hashtag/Formula1</td><td>Yes</td></tr>
+              <tr><td>Home, Explore, Search, Messages, sign-in</td><td class="mono">x.com/home</td><td>No — left alone</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><code>x.com</code> and <code>twitter.com</code> are both supported, including <code>www.</code> and <code>mobile.</code> subdomains.</p>
+      </section>
+
+      <section id="troubleshooting" aria-labelledby="troubleshooting-title">
+        <h2 id="troubleshooting-title">Troubleshooting</h2>
+        <p id="faq-empty" class="faq-empty" role="status">No matching help topics. Try a different search or contact us below.</p>
+
+        <details class="faq-item" data-help-item>
+          <summary>Links are not redirecting at all</summary>
+          <div class="answer">
+            <p>Check these in order:</p>
+            <ol>
+              <li>Confirm the extension is enabled in <code>about:addons</code> and is not blocked.</li>
+              <li>Confirm Firefox is version 140 or newer (Menu &rarr; Help &rarr; About Firefox).</li>
+              <li>Test with a direct link such as <code>https://x.com/NASA</code>. Home and Explore pages are intentionally not redirected.</li>
+              <li>Other privacy or redirect extensions may conflict. Disable them temporarily to test.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Some X/Twitter pages still open on X</summary>
+          <div class="answer">
+            <p>The extension only redirects content pages: posts, profiles, and hashtags. Navigation pages such as Home, Explore, Search, Notifications, Messages, settings, and sign-in are left untouched. Posts with unsupported URL shapes can also be skipped. If a content link does not redirect, send us the exact URL using the contact form.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Does it work in private windows?</summary>
+          <div class="answer">
+            <p>Only if the extension is allowed in private browsing. Open <code>about:addons</code> &rarr; the extension &rarr; <strong>Details</strong> and enable <strong>Run in Private Windows</strong>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Why does the address bar briefly show x.com before TwitterViewer.net?</summary>
+          <div class="answer">
+            <p>The extension intercepts the navigation before the X page loads, but Firefox may display the requested address for a moment. No X content is loaded by the extension, and your browser is then sent to TwitterViewer.net with the original link attached.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Will it redirect links inside TwitterViewer.net?</summary>
+          <div class="answer">
+            <p>No. TwitterViewer.net is never redirected, so there is no loop. Only top-level navigations to <code>x.com</code> and <code>twitter.com</code> hosts are rewritten.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Does it redirect images, videos, or API requests?</summary>
+          <div class="answer">
+            <p>No. Only main-frame page navigations are processed. Images, scripts, stylesheets, and background requests are untouched.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>Can I use it with Firefox for Android?</summary>
+          <div class="answer">
+            <p>Yes, on Firefox for Android 142 or newer, subject to Firefox for Android's extension support. Installation and behavior may differ from desktop Firefox.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-help-item>
+          <summary>How do I uninstall it?</summary>
+          <div class="answer">
+            <p>Open <code>about:addons</code>, find <strong>Twitterviewer redirect</strong>, open its menu, and choose <strong>Remove</strong>.</p>
+          </div>
+        </details>
+      </section>
+
+      <section id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Privacy</h2>
+        <p>The extension collects no data and declares no data-collection permissions. It runs locally in your browser, rewrites only eligible navigation URLs, and never reads page contents.</p>
+        <p>This help site is separate from the extension. Contact form messages are sent by email to the maintainer and include only what you type. No analytics or advertising scripts are used.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>Found a bug, have an install question, or want to suggest a feature? Send a message below. Replies are sent to the email address you provide.</p>
+
+        <div class="card">
+          <form id="contact-form" class="contact" novalidate>
+            <div class="field">
+              <label for="contact-name">Name <span class="note">(optional)</span></label>
+              <input id="contact-name" name="name" type="text" maxlength="100" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="contact-email">Your email</label>
+              <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+              <span class="hint">Used only to reply to your message.</span>
+            </div>
+            <div class="field">
+              <label for="contact-subject">Topic</label>
+              <select id="contact-subject" name="subject" required>
+                <option value="">Choose a topic</option>
+                <option value="Installation help">Installation help</option>
+                <option value="Bug report">Bug report</option>
+                <option value="Feature request">Feature request</option>
+                <option value="Privacy question">Privacy question</option>
+                <option value="Something else">Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" minlength="10" maxlength="5000" required></textarea>
+              <span class="hint">For bug reports, include the exact X/Twitter URL and your Firefox version if possible.</span>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button id="contact-submit" class="btn" type="submit">Send message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <p class="note">This is a small project, so replies may take a few days. Please do not include passwords, tokens, or other secrets in your message.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Twitterviewer redirect Help &middot; v1.0.1</p>
+      <p><a href="../">Home</a> &middot; <a href="https://addons.mozilla.org/twitterviewer-redirect">Mozilla Add-ons</a></p>
+      <p>Not affiliated with X Corp or TwitterViewer.net.</p>
+    </footer>
+  </div>
+  <script src="assets/contact.js" defer></script>
+</body>
+</html>
